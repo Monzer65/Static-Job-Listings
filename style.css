@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'League Spartan', sans-serif;
+}
+body {
+  background-color: hsl(180, 52%, 96%);
+}
+img {
+  display: block;
+}
+header {
+  background-color: hsl(180, 29%, 50%);
+}
+header img {
+  width: 100%;
+}
+ul {
+  display: grid;
+  gap: 2.5rem;
+  padding: 3.5rem 1.5rem 2rem;
+}
+li {
+  font-size: clamp(0.93rem, 3vw, 1.18rem);
+  position: relative;
+  list-style: none;
+  padding: 1.25rem;
+  padding-top: 2rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 0 hsla(180, 29%, 50%, 0.15);
+}
+.item-container {
+  width: 100%;
+}
+li img {
+  position: absolute;
+  top: -9%;
+  max-width: 48px;
+}
+.info {
+  display: grid;
+  gap: 0.75rem;
+  border-bottom: 1px solid hsla(180, 8%, 52%, 0.5);
+  margin-bottom: 1rem;
+}
+.company-new-featured {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.company {
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+}
+.new-featured {
+  display: flex;
+  gap: 0.5rem;
+}
+.new,
+.featured {
+  font-size: 0.88rem;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  height: 1.5rem;
+}
+.new {
+  background-color: hsl(180, 29%, 50%);
+}
+.featured {
+  background-color: hsl(180, 14%, 20%);
+}
+.position {
+  font-weight: 700;
+  color: hsl(180, 14%, 20%);
+  cursor: pointer;
+  font-size: clamp(0.93rem, 3vw, 1.35rem);
+}
+.postedAt-contract-location {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  color: hsl(180, 8%, 52%);
+}
+.separator {
+  opacity: 0.5;
+}
+.role-level-languages-tools,
+.languages,
+.tools {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.role,
+.level,
+.language,
+.tool {
+  font-weight: 700;
+  font-size: 1rem;
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 52%, 96%);
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.role:hover,
+.level:hover,
+.language:hover,
+.tool:hover {
+  color: white;
+  background-color: hsl(180, 29%, 50%);
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+#filter-wrapper {
+  position: relative;
+  display: none;
+  margin-top: -35px;
+  margin-inline: 1.5rem;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem 1.25rem 1.25rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 0 hsla(180, 29%, 50%, 0.15);
+}
+#filter-wrapper.active {
+  display: flex;
+}
+#filter-wrapper button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.filter-item {
+  display: flex;
+}
+.filter-item p {
+  padding: 0.4rem 0.6rem 0.4rem 0.5rem;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 52%, 96%);
+  border-radius: 2.5px 0 0 2.5px;
+}
+.remove-btn {
+  padding: 0.4rem 0.55rem;
+  border-radius: 0 5px 5px 0;
+  background-color: hsl(180, 29%, 50%);
+}
+.remove-btn:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+.clear-btn {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(180, 8%, 52%);
+  background-color: transparent;
+}
+.clear-btn:hover {
+  text-decoration: underline;
+}
+
+@media (width > 650px) {
+  body {
+    padding-bottom: 6rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4.5rem;
+    gap: 1.5rem;
+  }
+  li {
+    width: 100%;
+    max-width: 1110px;
+    padding: 2rem;
+  }
+  li img {
+    position: unset;
+    max-width: 70px;
+  }
+  .item-main {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .company-new-featured {
+    gap: 1rem;
+  }
+  .postedAt-contract-location {
+    margin-bottom: 0;
+    gap: 1rem;
+  }
+  .new-featured {
+    font-weight: 700;
+  }
+}
+
+@media (width > 850px) {
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-inline: 2rem; */
+  }
+  li img {
+    max-width: 100%;
+  }
+  .item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info {
+    border-bottom: none;
+    margin-bottom: 0;
+    gap: 0.5rem;
+  }
+  .role-level-languages-tools,
+  .languages,
+  .tools {
+    align-items: flex-end;
+    justify-content: end;
+  }
+  #filter-wrapper {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+}
